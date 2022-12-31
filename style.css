@@ -25,6 +25,7 @@ body{
   background: #8178e0;
   max-width: 450px;
   width: 100%;
+  position: relative;
   border-radius: 4px;
   box-shadow: 0 0 128px 0 rgb(0, 0, 0),
               0 32px 64px -48px rgba(0, 0, 0, 0.719);
@@ -470,4 +471,29 @@ span{
   height: 30%;
   width: 50%;
   border-radius: 0%;
+}
+
+/* BILL LIST */
+
+.bill{
+  border-radius: 8px;
+  margin-top: 5px;
+  background: #7e77b48a;
+}
+.check-bill{
+  display: flex;
+  position: absolute;
+  color: #333;
+  background: rgba(53, 7, 76, 0.39);
+  border-radius: 5px;
+  font-size: xx-large;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  right: 40px;
+}
+.check-bill:hover{
+  background-color: #468669;
+  cursor: pointer;
 }
