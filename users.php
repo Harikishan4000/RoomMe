@@ -7,7 +7,8 @@
 ?>
 <?php include_once "header.php"; ?>
 <body>
-  <div class="wrapper">
+  <div class="wrapper users-wrapper">
+    <div class="box"></div>
     <section class="users">
       <header>
         <div class="content">

@@ -10,13 +10,14 @@ continueBtn.onclick = ()=>{
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/billpay.php", true);
     xhr.onload = ()=>{
-        // console.log("HII");
+        console.log("HII");
       if(xhr.readyState === XMLHttpRequest.DONE){
           if(xhr.status === 200){
               let data = xhr.response;
+              // console.log(Hello);
               if(data === "success"){
                 // console.log(data);
-                // location.href = "#";
+                window.location = "bill_list.php";
               }else{
                 errorText.style.display = "block";
                 errorText.textContent = data;

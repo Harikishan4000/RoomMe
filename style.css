@@ -119,10 +119,21 @@ body{
 .form .link a:hover{
   text-decoration: underline;
 }
-
+/*MENU*/
+.wrapper> .box{
+  height: inherit;
+  width: 70px;
+  position: absolute;
+  background: #333;
+  z-index: 100;
+}
 
 /* Users List CSS Start */
+.users-wrapper{
+  min-width: 550px;
+}
 .users{
+  margin-left: 100px;
   padding: 25px 30px;
 }
 .users header,
@@ -264,7 +275,9 @@ body{
   font-size: 17px;
   font-weight: 500;
 }
+
 .chat-box{
+  
   position: relative;
   min-height: 500px;
   max-height: 500px;
@@ -495,5 +508,20 @@ span{
 }
 .check-bill:hover{
   background-color: #468669;
+  cursor: pointer;
+}
+.add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background: #333;
+  font-size: x-large;
+  margin-top: 8px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.add:hover{
   cursor: pointer;
 }
