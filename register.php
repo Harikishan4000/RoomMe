@@ -11,12 +11,12 @@
     <section class="form signup">
     <div class="main">
 	<span>R</span>
-  <span class="letter"></span>
+  <span class="letter"> </span>
 	<span>O</span>
 	<span>M</span>
-	<span>I</span>
+	<span>-</span>
+	<span>M</span>
 	<span>E</span>
-	<span>S</span>
 </div>
 
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">

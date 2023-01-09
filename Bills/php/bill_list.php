@@ -18,7 +18,7 @@
                                 <p>To be paid on : '.$row['due'].'</p>
                             </div>
                             <div class="check-bill">
-                            <a href="" onclick="removee()">✓</a>
+                            <p class="done">✓</p>
                                 <span name="bill_id_hidden"hidden>'.$row['bill_id'].'</span>
                             </div>
                         </div>';
@@ -28,7 +28,7 @@
                                 <h3 style="margin-top: 10px;">'.$row['bill_name'].': #'.$row['bill_id'].'</h3>
                                 <p>'.$row['cost'].'</p>
                                 <p style="color: #2f684e;">Paid</p>
-                                <p>To be paid on : '.$row['due'].'</p>
+                                <p>Paid on: '.$row['due'].'</p>
                             </div>
                         </div>';
 

@@ -9,15 +9,6 @@
     if(mysqli_num_rows($query) == 0){
         $output .= "No users are available to chat";
     }else{
-        $output = "<a href='chat.php?grp_id=1234'>
-                    <div class='content'>
-                    <img src='php/images/group-dp.webp'>
-                    <div class='details'>
-                        <span>ALL ROOMIES</span>
-                        <p>Group chat </p>
-                    </div>
-                    </div>
-                    </a>";
         while($row = mysqli_fetch_assoc($query)){
                 $sql2 = "SELECT * FROM messages WHERE (in_msg_id = {$row['unique_id']}
                         OR out_msg_id = {$row['unique_id']}) AND (out_msg_id = {$outgoing_id} 

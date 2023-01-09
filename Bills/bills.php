@@ -42,7 +42,6 @@
         <div class="field input">
           <label>Due on</label>
           <input type="date" name="dueon" placeholder="Due on" required>
-          <i class="fas fa-eye"></i>
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Submit">
@@ -52,7 +51,6 @@
     </section>
   </div>
   
-  <!-- <script src="javascript/pass-show-hide.js"></script> -->
   <script src="bills.js"></script>
 
 </body>

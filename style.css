@@ -12,6 +12,7 @@
   letter-spacing: 1.5px;
 }
 body{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +22,16 @@ body{
   background-blend-mode: darken;
   padding: 0 10px;
 }
+.svggg{
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
 .wrapper{
+  /* display: block; */
   background: #8178e0;
   max-width: 450px;
   width: 100%;
@@ -30,6 +40,35 @@ body{
   box-shadow: 0 0 128px 0 rgb(0, 0, 0),
               0 32px 64px -48px rgba(0, 0, 0, 0.719);
 }
+.buttons{
+  /* position: absolute; */
+  width:450px;
+  margin-top: 10px;
+  top: 3px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+#button{
+  padding: 10px 10px 10px 10px;
+  border: 0;
+  background: #333;
+  font-size: 14px;
+  border-radius: 3px;
+  box-shadow: 3px 3px #fff;
+  transition: all .1s linear;
+  cursor: pointer;
+}
+#button:hover {
+  box-shadow: 5px 10px rgb(0, 255, 255);
+
+}
+#button> i{
+  color: #fff;
+}
+
+
 
 /* Login & Signup Form CSS Start */
 .form{
@@ -120,20 +159,8 @@ body{
   text-decoration: underline;
 }
 /*MENU*/
-.wrapper> .box{
-  height: inherit;
-  width: 70px;
-  position: absolute;
-  background: #333;
-  z-index: 100;
-}
 
-/* Users List CSS Start */
-.users-wrapper{
-  min-width: 550px;
-}
 .users{
-  margin-left: 100px;
   padding: 25px 30px;
 }
 .users header,
@@ -524,4 +551,51 @@ span{
 
 .add:hover{
   cursor: pointer;
+}
+
+
+/* -------------------IOU------------------------ */
+
+.users-list .iou-a{
+  border-radius: 5px;
+  padding: 2px;
+  border-bottom: 1px solid transparent;
+  background: rgba(0,0,0,0.09);
+}
+.users-list .iou-a:hover{
+  border-bottom: 1px solid #fff;
+}
+.users-list a .iou-details{
+  line-height: 20px;
+}
+.users-list a .iou-details p{
+  color: #303030;
+}
+
+.typing-area.uoi::before{
+  content: "₹";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: inherit;
+  border-radius: 5px 0 0 5px;
+  background: rgba(130, 130, 130, 0.577);
+} 
+
+input::placeholder{
+  text-overflow:clip;
+}
+
+.iou-chat{
+  background: rgba(0,0,0,0.4)url(frontend/imgs/seamless-pattern-finance-money-business-background-in-blue-vector.jpg);
+  background-blend-mode: darken;
+}
+
+/* -------------------------CHORES--------------------- */
+select{
+  height: 30px;
+  background: none;
+  border: none;
+  font-size: 17px;
 }

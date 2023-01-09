@@ -24,14 +24,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Room-me Bill</title>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <script src="https://kit.fontawesome.com/5f546344bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrapper">
+  <div class="buttons">
+    <a id="button" class="messages" href="../users.php"><i class="fa-solid fa-message"></i></a>
+    <a id="button" class="messages" href="#"><i class="fa-solid fa-list"></i></a>
+    <a id="button" class="messages" href="users.php"><i class="fa-solid fa-money-bill"></i></a>
+  </div>
     <section class="users">
-    <a href="#" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+
       <header>
         <div class="content">
 
@@ -58,7 +62,7 @@
                 <p>To be paid on : 15/05/2020</p>
             </div>
             <div class="check-bill">
-                <a href="" onclick="remove()">✓</a>
+                <a href="" onclick="removee()">✓</a>
             </div>
         </div> -->
         
@@ -77,25 +81,6 @@
   </div>
 
   <script src="bill_list.js"></script>
-  <!-- <script>
-    
-    $("body").on('click', '.check-bill', function(){   //DONE BUTTON IN BILLS
-    let xhr = new XMLHttpRequesonclick="remove()"();
-    xhr.open("POST", "php/bill_paid.php", true);
-    xhr.onload = ()=>{
-      if(xhr.readyState === XMLHttpRequest.DONE){
-          if(xhr.status === 200){
-              let data = xhr.response;
-              if(data === "success"){
-                console.log(data);
-              }else{
-                errorText.style.display = "block";
-                errorText.textContent = data;
-              }
-          }
-      }
-    }
-});</script> -->
 
 </body>
 </html>

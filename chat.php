@@ -45,7 +45,7 @@
       </form>
     </section>
   </div>
-
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
   <script src="javascript/chat.js"></script>
 
 </body>
