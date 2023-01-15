@@ -22,7 +22,7 @@
          <a href="chores.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
 
         <div class="bills-img">
-        <img src="../frontend/imgs/cleaning.gif" alt="">
+        <img style="border-radius: 5px;" src="../frontend/imgs/cleaning.gif" alt="">
         </div>
         
       
@@ -36,7 +36,9 @@
           <label>To be done by: </label>
           <select name="chore_by" class='chore-by'>
           <?php 
-            $sql=mysqli_query($conn, "SELECT * from users");
+            $gid=$_SESSION['group_id'];
+
+            $sql=mysqli_query($conn, "SELECT * from users where group_id='$gid'");
             while($row=mysqli_fetch_assoc($sql)){
                 echo "<option value=\"$row[unique_id]\">$row[fname]</option>";
             } 

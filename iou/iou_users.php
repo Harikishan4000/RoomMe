@@ -2,7 +2,8 @@
     session_start();
     include_once "../php/config.php";
     $outgoing_id = $_SESSION['unique_id'];
-    $sql = "SELECT * FROM users WHERE NOT unique_id = {$outgoing_id} ORDER BY user_id DESC";
+    $gid=$_SESSION['group_id'];
+    $sql = "SELECT * FROM users WHERE NOT unique_id = {$outgoing_id} AND group_id='$gid' ORDER BY user_id DESC";
     $query = mysqli_query($conn, $sql);
     $output = "";
     $group="SELECT * from users";

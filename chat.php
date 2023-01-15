@@ -18,7 +18,6 @@
           // }else{
           //   header("location: users.php");
           // }
-
           $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
           $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
           if(mysqli_num_rows($sql) > 0){
@@ -37,16 +36,16 @@
       <div class="chat-box">
 
       
+
       </div>
       <form action="#" class="typing-area">
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
         <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off">
-        <button><i class="fab fa-paper-plane"></i></button>
+        <button><i class="fa fa-paper-plane"></i></button>
       </form>
     </section>
   </div>
   <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
   <script src="javascript/chat.js"></script>
-
 </body>
 </html>

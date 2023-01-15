@@ -16,15 +16,17 @@ body{
     background: transparent; */
     position: relative;
     display: flex;
+  min-height: 100vh;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     background: rgba(0,0,0,0.3) url(../frontend/imgs/bg/OG/GIF1.gif);
     background-size: cover;
     background-blend-mode: darken;
 }
 #logo{
     position: absolute;
+    width: 50vw;
+    height: 50vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);

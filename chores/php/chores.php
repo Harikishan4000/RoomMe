@@ -3,8 +3,9 @@
     if(isset($_SESSION['unique_id'])){
         include_once "../../php/config.php";
         $outgoing_id = $_SESSION['unique_id'];
+        $gid=$_SESSION['group_id'];
         $output = "";
-        $sql = "SELECT * FROM chores;";//add session id
+        $sql = "SELECT * FROM chores where group_id='$gid';";//add session id
         $query = mysqli_query($conn, $sql);
 
         if(mysqli_num_rows($query) > 0){
@@ -19,12 +20,15 @@
                                 <h3 style="margin-top: 10px;">'.$row['chore_name'].'</h3>
                                 <p style="color: #fff;">To be done by: '.$row_users['fname'].' '.$row_users['lname'].'</p> <!--ADD NAME HEREE--!>
                                 <p>Undone</p>
+                                <p>'.$row['time'].'</p>
                             </div>
                             <div class="check-bill">
-                            <a href="" onclick="removee()">✓</a>
-                                <span name="bill_id_hidden"hidden>'.$row['bill_id'].'</span>
-                            </div>
-                        </div>';
+                            <form action="chores.php" method="POST">
+                            <input name="chore_id" value="'.$row['chore_id'].'" type="hidden">
+                                <button type="submit">✓</button>
+                                </form>
+                                </div>
+                            </div>';
                     }
                     else{
                         $output .= '<div class="content bill">
@@ -32,6 +36,8 @@
                                     <h3 style="margin-top: 10px;">'.$row['chore_name'].'</h3>
                                     <p style="color: #2f684e;">To be done by: '.$row_users['fname'].' '.$row_users['lname'].'</p>
                                     <p style="color: #2f684e;">Done</p>
+                                    <p>'.$row['time'].'</p>
+
                                 </div>
                             </div>';
     
@@ -43,10 +49,16 @@
                                     <h3 style="margin-top: 10px;">'.$row['chore_name'].'</h3>
                                     <p>To be done by: '.$row_users['fname'].' '.$row_users['lname'].'</p> <!--ADD NAME HEREE--!>
                                     <p>Undone</p>
+                                <p>'.$row['time'].'</p>
+
                                 </div>
                                 <div class="check-bill">
-                                <a href="" onclick="removee()">✓</a>
-                                    <span name="bill_id_hidden"hidden>'.$row['bill_id'].'</span>
+
+                                <form action="chores.php" method="POST">
+                            <input name="chore_id" value="'.$row['chore_id'].'" type="hidden">
+                                <button type="submit">✓</button>
+                            </form>
+
                                 </div>
                             </div>';
                     }
@@ -56,7 +68,9 @@
                                     <h3 style="margin-top: 10px;">'.$row['chore_name'].'</h3>
                                     <p>To be done by: '.$row_users['fname'].' '.$row_users['lname'].'</p> <!--ADD NAME HEREE--!>
                                     <p style="color: #2f684e;">Done</p>
-                                    <p>To be paid on : '.$row['due'].'</p>
+
+                                     <p>'.$row['time'].'</p>
+
                                 </div>
                             </div>';
     
@@ -66,7 +80,7 @@
                 
             }
         }else{
-            $output .= '<div class="text">No bills are available. Once you send message they will appear here.</div>';
+            $output .= '<div class="text">No chores are available.</div>';
         }
         echo $output;
     }else{

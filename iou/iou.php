@@ -22,9 +22,10 @@
   </div>
   <div class="wrapper">
   <div class="buttons">
-    <a id="button" class="messages" href="../users.php"><i class="fa-solid fa-message"></i></a>
-    <a id="button" class="messages" href="../Bills/bill_list.php"><i class="fa-solid fa-list"></i></a>
-    <a id="button" class="messages" href="iou.php"><i class="fa-solid fa-money-bill"></i></a>
+  <a id="button" class="messages" href="../users.php"><i class="fa-solid fa-message"></i></a>
+    <a id="button" class="messages" href="../Bills/bill_list.php"><i class="fa-solid fa-receipt"></i></a>
+    <a id="button" class="messages" href="#"><i class="fa-solid fa-money">$</i></a>
+    <a id="button" class="messages" href="../chores/chores.php"><i class="fa-solid fa-broom"></i></a>
   </div>
     <section class="users">
       <header>

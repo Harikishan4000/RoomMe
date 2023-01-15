@@ -44,7 +44,7 @@
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
         <input style="border-radius: 0; font-size: 10px; margin-right:3px;" type="text" name="uoi" class="input-field uoi" placeholder="Use minus(-) to remove what they owe." autocomplete="off">
         <input style="border-radius: 0;" type="text" name="msg" class="input-field msg" placeholder="reason..." autocomplete="off">
-        <button><i class="fab fa-telegram"></i></button>
+        <button><i class="fa fa-paper-plane"></i></button>
       </form>
     </section>
   </div>
