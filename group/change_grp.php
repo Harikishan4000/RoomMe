@@ -48,6 +48,7 @@
           <input type="submit" name="submit" value="Join room">
         </div>
       </form>
+      <a href="leave_grp.php" class="leave_grp">Leave group</a>
     </section>
   </div>
 

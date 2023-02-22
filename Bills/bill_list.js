@@ -1,5 +1,10 @@
 usersList = document.querySelector(".users-list"),
 
+function scrollToBottom(){
+  usersList.scrollTop = usersList.scrollHeight;
+}
+
+usersList.scrollTo(0, usersList.scrollHeight);
 
 setInterval(() =>{
     let xhr = new XMLHttpRequest();

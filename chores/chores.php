@@ -60,7 +60,7 @@
             <p style="margin-top: 10px;">Number of undone chores: <?php echo $row['count(*)']; ?></p>
           </div>
         </div>
-        <a href="../../php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
+        
       </header>
       <div class="users-list">
             

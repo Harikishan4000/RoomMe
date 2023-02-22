@@ -15,7 +15,7 @@
     <a id="button" class="messages" href="users.php"><i class="fa-solid fa-message"></i></a>
     <a id="button" class="messages" href="Bills/bill_list.php"><i class="fa-solid fa-receipt"></i></a>
     <a id="button" class="messages" href="iou/iou.php"><i class="fa-solid fa-money">$</i></a>
-    <a id="button" class="messages" href="iou/iou.php"><i class="fa-solid fa-broom"></i></a>
+    <a id="button" class="messages" href="chores/chores.php"><i class="fa-solid fa-broom"></i></a>
   </div>
     <section class="users">
       <header>
@@ -30,7 +30,7 @@
           <div class="details">
             <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
             <p><?php echo $row['status']; ?></p>
-            <p style="font-size: 12px; color: rgba(0,0,0,0.5)"><a style="padding: 3px; background: #333; color: #fff; margin-right: 5px; border-radius: 2px;" href="<?php if($row['group_id']){echo "group/change_grp.php";}else{echo "group/group.php";}?>">Room ID:</a><?php echo $row['group_id']; ?></p>
+            <p style="font-size: 12px; color: rgba(0,0,0,0.5)"><a class="roomid" href="<?php if($row['group_id']){echo "group/change_grp.php";}else{echo "group/group.php";}?>">Room ID:</a><?php echo $row['group_id']; ?></p>
           </div>
         </div>
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>

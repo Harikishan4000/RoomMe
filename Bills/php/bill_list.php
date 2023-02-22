@@ -4,7 +4,6 @@
         include_once "../../php/config.php";
         $outgoing_id = $_SESSION['unique_id'];
         $gid=$_SESSION['group_id'];
-        $incoming_id = mysqli_real_escape_string($conn, $_POST['incoming_id']);
         $output = "";
         $sql = "SELECT * FROM bills where group_id='$gid';";
         $query = mysqli_query($conn, $sql);
@@ -29,19 +28,22 @@
                             </div>
                         </div>';
                 }else{
+                    $var=$row['paid_by'];
+                    $q=mysqli_query($conn, "SELECT * from users where unique_id=$var");
+                    $row2 = mysqli_fetch_assoc($q);
                     $output .= '<div class="content bill">
                             <div class="details">
                                 <h3 style="margin-top: 10px;">'.$row['bill_name'].': #'.$row['bill_id'].'</h3>
                                 <p>₹'.$row['cost'].'</p>
-                                <p style="color: #2f684e;">Paid</p>
-                                <p>Paid on: '.$row['due'].'</p>
+                                <p style="color: #2f684e;">Paid by: '.$row2['fname'].' '.$row2['lname'].'</p>
+                                <p>Due on: '.$row['due'].'</p>
                             </div>
                         </div>';
 
                 }
             }
         }else{
-            $output .= '<div class="text">No bills are available.</div>';
+            $output .= '<div class="text" style="margin-top: 10px;">No bills are available.</div>';
         }
         echo $output;
     }else{

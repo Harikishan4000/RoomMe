@@ -22,7 +22,7 @@
          <a href="bill_list.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
 
         <div class="bills-img">
-        <img src="../frontend/imgs/bill.png" alt="">
+        <img style="border-radius: 5px;" src="bill.gif" alt="">
         </div>
         
       

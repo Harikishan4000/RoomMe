@@ -5,9 +5,14 @@
     $gid=$_SESSION['group_id'];
     $id= $_POST['bill_id_hidden'];
     $cost=$_POST['cost_hidden'];
-    // $query="UPDATE bills SET status='P' AND paid_by='$paidby' where bill_id='$id';";
+
     $query="UPDATE `bills` SET `status`='P',`paid_by`='$paidby' WHERE `bill_id`='$id'";
-    if($sql=mysqli_query($conn,$query)){
+
+    $sql=mysqli_query($conn,$query);
+    $q=mysqli_query($conn, "SELECT * from bills where bill_id=$id");
+    $row2=mysqli_fetch_assoc($q);
+
+    if($row2['status']=='P'){
         $q3=mysqli_query($conn, "SELECT * FROM users where not unique_id='$paidby' and group_id='$gid'");
         $count=mysqli_num_rows($q3)+1;
         $amount=$cost/$count;
@@ -18,3 +23,5 @@
         echo "Some error occurred";
     }
 ?>
+
+<!-- $query="UPDATE `bills` SET `status`='P',`paid_by`='$paidby' WHERE `bill_id`='$id'"; -->
