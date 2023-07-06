@@ -17,6 +17,9 @@
   <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
 </head>
 <body>
+  <div class="ld"></div>
+
+
   <div class="wrapper">
     <section class="form bills">
          <a href="bill_list.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
@@ -51,7 +54,9 @@
       <!-- <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div> -->
     </section>
   </div>
-  
+
+
+  <script src="../lightDark.js"></script>
   <script src="bills.js"></script>
 
 </body>

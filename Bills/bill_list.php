@@ -95,6 +95,9 @@
     </section>
   </div>
 
+
+  
+  <script src="../lightDark.js"></script>
   <script src="bill_list.js"></script>
   <script>
 
@@ -104,7 +107,6 @@
               ?>
         });
 </script> 
-<script src="../lightDark.js"></script>
 
 
 </body>

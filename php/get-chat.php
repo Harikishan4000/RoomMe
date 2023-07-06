@@ -26,6 +26,7 @@
                 $decryption = openssl_decrypt($row['msg'], $ciphering, $decryption_key, $options, $decryption_iv);
                 if($row['out_msg_id'] === $outgoing_id){
                     $output .= '<div class="chat outgoing">
+                                <span class="hoverTimeChatHiddenOut">'.$row['timestamp'].'</span>  
                                 <div class="details">
                                     <p>'. $decryption .'</p>
                                 </div>
@@ -36,6 +37,7 @@
                                 <div class="details">
                                     <p>'. $decryption .'</p>
                                 </div>
+                                <span class="hoverTimeChatHiddenIn">'.$row['timestamp'].'</span>  
                                 </div>';
                 }
             }

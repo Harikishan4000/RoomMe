@@ -5,15 +5,16 @@
     $gid = $_SESSION['group_id'];
     $sql = "SELECT * FROM users WHERE NOT unique_id = {$outgoing_id} AND group_id='{$gid}' ORDER BY user_id DESC";
     $query = mysqli_query($conn, $sql);
-    $output = '<a href="group_chat.php?group_id='. $gid .'">
-                <div class="content">
-                <img src="php/images/'. $row['img'] .'" alt="">
-                <div class="details">
-                    <span>Group Chat</span>
-                </div>
-                </div>
-                <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
-            </a>';
+    $output='';
+    // $output = '<a href="group_chat.php?group_id='. $gid .'">
+    //             <div class="content">
+    //             <img src="php/images/'. $row['img'] .'" alt="">
+    //             <div class="details">
+    //                 <span>Group Chat</span>
+    //             </div>
+    //             </div>
+    //             <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+    //         </a>';
     if(!$gid){
         $output .= "Join a room to chat!";
     }

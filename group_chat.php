@@ -10,15 +10,15 @@
   <div class="wrapper">
     <section class="chat-area">
       <header>
-      <?php 
-          $grp_id = mysqli_real_escape_string($conn, $_GET['group_id']);
-          $sql = mysqli_query($conn, "SELECT * FROM users WHERE group_id = {$grp_id}");
-          if(mysqli_num_rows($sql) > 0){
-            $row = mysqli_fetch_assoc($sql);
-          }else{
-            header("location: users.php");
-          }
-        ?>
+        <?php 
+            $grp_id = mysqli_real_escape_string($conn, $_GET['group_id']);
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE group_id = {$grp_id}");
+            if(mysqli_num_rows($sql) > 0){
+              $row = mysqli_fetch_assoc($sql);
+            }else{
+              header("location: users.php");
+            }
+          ?>
         <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
         <img src="php/images/<?php echo $row['img']; ?>" alt="">
         <div class="details">

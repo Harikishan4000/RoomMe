@@ -18,6 +18,8 @@
 
 </head>
 <body>
+  <div class="ld"></div>
+
   <div class="wrapper">
     <section class="chat-area">
       <header>
@@ -48,6 +50,8 @@
       </form>
     </section>
   </div>
+
+  <script src="../lightDark.js"></script>
   <script src="pays.js"></script>
 
 </body>

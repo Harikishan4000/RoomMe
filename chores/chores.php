@@ -72,6 +72,9 @@
     </section>
   </div>
 
+
+
+  <script src="../lightDark.js"></script>
   <script src="chores.js"></script>
   <script>
 
@@ -81,7 +84,5 @@
               ?>
         });
 </script> 
-
-<script src="../lightDark.js"></script>
 </body>
 </html>

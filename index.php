@@ -34,6 +34,9 @@
 
 <a href="login.php">Click to enter</a>    
 <script src="./lightDark.js"></script>
+<script>
+ localStorage.setItem("LightMode", 'disabled');
+</script>
 
 
 </body>

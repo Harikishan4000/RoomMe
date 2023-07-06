@@ -48,8 +48,11 @@ body.light{
   transition: transform, box-shadow, 0.3s ease;
   }
   .ld.light{
+    background-color: #60fff2;
     background-image: url(../frontend/icons8-globe-80.png);
+    border: 3px solid #d2d2d2;
     box-shadow: inset 0 0 10px rgba(0,0,0, 0.3), 0 0 4rem rgba(0,0,0, 0.6);
+  
   }
 
   .ld:hover{

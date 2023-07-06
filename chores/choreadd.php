@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
+  <div class="ld"></div>
+
+
   <div class="wrapper">
     <section class="form chores">
          <a href="chores.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
@@ -52,7 +55,10 @@
       <!-- <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div> -->
     </section>
   </div>
-  
+
+
+
+  <script src="../lightDark.js"></script>  
   <script src="choreadd.js"></script>
 
 </body>
