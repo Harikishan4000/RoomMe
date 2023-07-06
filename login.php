@@ -7,6 +7,7 @@
 
 <?php include_once "header.php"; ?>
 <body>
+  <div class="ld"></div>
   <div class="wrapper">
     <section class="form login">
     <!-- <header style="letter-spacing: 2.3px;">Room-Me</header> -->
@@ -41,6 +42,7 @@
   
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/login.js"></script>
+  <script src="./lightDark.js"></script>
 
 </body>
 </html>

@@ -7,6 +7,8 @@
 ?>
 <?php include_once "header.php"; ?>
 <body>
+<div class="ld"></div>
+
   <div class="wrapper">
     <section class="chat-area">
       <header>
@@ -40,5 +42,7 @@
   </div>
   <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
   <script src="javascript/chat.js"></script>
+<script src="./lightDark.js"></script>
+
 </body>
 </html>

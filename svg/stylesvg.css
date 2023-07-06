@@ -22,7 +22,45 @@ body{
     background: rgba(0,0,0,0.3) url(../frontend/imgs/bg/OG/GIF1.gif);
     background-size: cover;
     background-blend-mode: darken;
+  /* transition: background 0.1s ease; */
+
 }
+body.light{
+    background: rgba(0,0,0,0.5)url(../frontend/imgs/bg/OG/GIF2.gif);
+    background-size: cover;
+    background-position: 0 -10vh;
+  
+  }
+
+.ld{
+    position: absolute;
+    top:30px;
+    right:30px ;
+    width: 40px;
+    height: 40px;
+    background-color: #2b0132;
+    background-image: url(../frontend/icons8-crescent-moon-100.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid #3a3838;
+    box-shadow: inset 0 0 10px rgba(139, 139, 139, 0.1), 0 0 1rem rgba(154, 154, 154, 0.254);
+  cursor: pointer;
+  transition: transform, box-shadow, 0.3s ease;
+  }
+  .ld.light{
+    background-image: url(../frontend/icons8-globe-80.png);
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.3), 0 0 4rem rgba(0,0,0, 0.6);
+  }
+
+  .ld:hover{
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.3);
+  }
+  
+  .ld:active{
+    transform: scale(0.9);
+  }
+
 #logo{
     position: absolute;
     width: 50vw;

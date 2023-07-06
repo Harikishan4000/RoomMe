@@ -7,6 +7,7 @@
 
 <?php include_once "header.php"; ?>
 <body>
+<div class="ld"></div>
   <div class="wrapper">
     <section class="form signup">
     <div class="main">
@@ -54,6 +55,7 @@
 
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/signup.js"></script>
+  <script src="./lightDark.js"></script>
 
 </body>
 </html>

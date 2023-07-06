@@ -7,8 +7,9 @@
 ?>
 <?php include_once "header.php"; ?>
 <body>
+<div class="ld"></div>
+
   <div class="box">
-    
   </div>
   <div class="wrapper">
   <div class="buttons">
@@ -55,6 +56,7 @@
   </div>
 
   <script src="javascript/users.js"></script>
+  <script src="./lightDark.js"></script>
 
 </body>
 </html>

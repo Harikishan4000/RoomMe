@@ -39,6 +39,8 @@
     
 ?>
 <body>
+<div class="ld"></div>
+
   <div class="wrapper">
   <div class="buttons">
   <a id="button" class="messages" href="../users.php"><i class="fa-solid fa-message"></i></a>
@@ -102,6 +104,8 @@
               ?>
         });
 </script> 
+<script src="../lightDark.js"></script>
+
 
 </body>
 </html>
